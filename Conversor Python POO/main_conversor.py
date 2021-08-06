@@ -1,10 +1,10 @@
 import os
 import random
+
 from Class_menu import Menu
 from User_Conversor import User
-
 from Conversor import conversor
-from dicts_info_monedas import dictionary_Moneys
+from dicts_info_moneys import dictionary_Moneys
 
 def menu_3():
     Menu._id = random.randint(1, 1000)
@@ -44,8 +44,9 @@ def menu_1():
     Menu.valor_entrada = int(input(Menu.mensaje))
 
 def run():
-    User.name = (input(f'Bienvenido al conversor de Monedas, para empezar, danos tu nombre: '))
+    User.name = (input(f'Bienvenido al conversor de Monedas, para empezar, dinos tu nombre: '))
     User.id = random.randint(1, 1000)
+    print('')
     print(f'Hola {User.name}, ¡es un gusto poder ayudarte!')
 
     menu_1()
@@ -56,6 +57,7 @@ def run():
     conversor.amount_coin = Menu.valor_entrada
 
     menu_3()
+    print('')
     conversor.money_B = Menu.valor_entrada
     conversor(conversor.id, conversor.money_A, conversor.money_B, conversor.amount_coin)
 

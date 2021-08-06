@@ -1,4 +1,4 @@
-from dicts_info_monedas import dictionary_Moneys
+from dicts_info_moneys import dictionary_Moneys
 
 class conversor:
 
